@@ -1,0 +1,9 @@
+⭐️ Simple GRPO
+
+Вы можете запустить GRPO (Group Relative Policy Optimization - основной алгоритм Deepseek r1), для моделей на 8b  параметров на GPU стоимостью 10 долл/ч.
+
+4xH100 достаточно для тренировки Llama 3.1 8b и алгоритм прекрасно работает.
+
+▪ Код: https://github.com/minosvasilias/simple_grpo
+
+#gpro #deepseek #reasoning
