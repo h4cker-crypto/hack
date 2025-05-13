@@ -1,0 +1,28 @@
+Тип хэша	Идентификатор (-m)	Пример команды
+MD5	0	hashcat -m 0 -a 0 -o cracked.txt hash.txt wordlist.txt
+MD5 (Unix)	500	hashcat -m 500 -a 0 -o cracked.txt hash.txt wordlist.txt
+SHA1	100	hashcat -m 100 -a 0 -o cracked.txt hash.txt wordlist.txt
+SHA-1 (Unix)	150	hashcat -m 150 -a 0 -o cracked.txt hash.txt wordlist.txt
+SHA-256	1400	hashcat -m 1400 -a 0 -o cracked.txt hash.txt wordlist.txt
+SHA-512	1700	hashcat -m 1700 -a 0 -o cracked.txt hash.txt wordlist.txt
+SHA-512 Crypt (Unix)	1800	hashcat -m 1800 -a 0 -o cracked.txt hash.txt wordlist.txt
+NTLM	1000	hashcat -m 1000 -a 0 -o cracked.txt hash.txt wordlist.txt
+LM	3000	hashcat -m 3000 -a 0 -o cracked.txt hash.txt wordlist.txt
+bcrypt (Blowfish)	3200	hashcat -m 3200 -a 0 -o cracked.txt hash.txt wordlist.txt
+MySQL4.1/MySQL5	300	hashcat -m 300 -a 0 -o cracked.txt hash.txt wordlist.txt
+MySQL323	200	hashcat -m 200 -a 0 -o cracked.txt hash.txt wordlist.txt
+Cisco-IOS SHA256	5700	hashcat -m 5700 -a 0 -o cracked.txt hash.txt wordlist.txt
+WPA/WPA2	2500	hashcat -m 2500 -a 0 -o cracked.txt hash.hccapx wordlist.txt
+WPA-PMKID	16800	hashcat -m 16800 -a 0 -o cracked.txt hash.txt wordlist.txt
+MS Office <= 2003	9700	hashcat -m 9700 -a 0 -o cracked.txt hash.txt wordlist.txt
+MS Office 2007	9400	hashcat -m 9400 -a 0 -o cracked.txt hash.txt wordlist.txt
+MS Office 2010	9500	hashcat -m 9500 -a 0 -o cracked.txt hash.txt wordlist.txt
+MS Office 2013	9600	hashcat -m 9600 -a 0 -o cracked.txt hash.txt wordlist.txt
+PDF 1.1-1.3 (Acrobat 2-4)	10400	hashcat -m 10400 -a 0 -o cracked.txt hash.txt wordlist.txt
+PDF 1.4+ (Acrobat 5+)	10500	hashcat -m 10500 -a 0 -o cracked.txt hash.txt wordlist.txt
+RAR3-hp	23800	hashcat -m 23800 -a 0 -o cracked.txt hash.txt wordlist.txt
+Zip2.0 (Classic)	13600	hashcat -m 13600 -a 0 -o cracked.txt hash.txt wordlist.txt
+7-Zip	11600	hashcat -m 11600 -a 0 -o cracked.txt hash.txt wordlist.txt
+Kerberos 5 TGS-REP etype 23	13100	hashcat -m 13100 -a 0 -o cracked.txt hash.txt wordlist.txt
+Kerberos 5 TGS-REP etype 17	19600	hashcat -m 19600 -a 0 -o cracked.txt hash.txt wordlist.txt
+		
