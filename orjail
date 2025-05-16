@@ -1,0 +1,20 @@
+Сохраняем анонимность системы с orjail!
+
+orjail — это инструмент, который позволяет создавать вокруг программ изолированное пространство в целях принудительного перенаправления их трафика через анонимную сеть Tor. Тем самым утилита создаёт стойкое окружение для всего, что пытается обнаружить ваш реальный IP адрес. 
+
+Установка в Kali Linux:
+$ sudo apt install tor bc firejail
+$ git clone https://github.com/orjail/orjail
+$ cd orjail
+$ sed -i 's/USERHOME=$(getent passwd les | cut -d: -f 6)/USERHOME=$(getent passwd $USER  | cut -d: -f 6)/' ./usr/sbin/orjail
+$ sed -i 's/chown "$USERNAME" "$TORCONFIGFILE"/#chown "$USERNAME" "$TORCONFIGFILE"/' ./usr/sbin/orjail
+$ sudo make install
+
+Проверка своего текущего IP адреса:
+$ sudo orjail curl suip.biz/ip/
+
+Получение содержимого страницы через Tor:  
+$ sudo orjail curl autistici.org > autistici.org
+
+Получение сайта .onion через Tor: 
+$ sudo orjail curl hacktoolseqoqaqn.onion
